@@ -2,6 +2,39 @@
 
 Drop-in native C11 `node.exe` / `node` launcher (~60 KB, zero shell shims, zero Node bootstrap dependency) that hydrates official debloated Node.js runtimes **once** from [`awesome-os/b8g-ghost`](https://github.com/awesome-os/b8g-ghost) (`cas-v1`) into `~/.b8g/cas/node/<sha256>/`.
 
+## Quick Install & Usage
+
+### Windows (PowerShell 1-liner)
+
+```powershell
+irm https://github.com/awesome-os/node/releases/latest/download/install.ps1 | iex
+```
+
+### Linux (x64 / ARM64) & macOS (Apple Silicon)
+
+```sh
+curl -fsSL https://github.com/awesome-os/node/releases/latest/download/install.sh | sh
+```
+
+### CLI Usage
+
+```powershell
+# Inspect installed runtime version & help
+node --version
+node --help
+
+# Run a JavaScript / erasable TypeScript script
+node ./app.mts
+
+# Optional: store hydrated CAS layers on a custom drive/path
+$env:B8G_GHOST_CACHE_DIR = "D:\b8g-cas"   # POSIX: export B8G_GHOST_CACHE_DIR=/data/b8g-cas
+node --ghost-info
+```
+
+### Releases & Verification
+
+- **Latest Release:** [`awesome-os/node` Releases](https://github.com/awesome-os/node/releases/latest) — includes `SHA256SUMS.txt` and the 5-OS matrix (`win64`, `linux-x64`, `linux-arm64`, `macos-arm64`, `wasm32-wasi`) built via [`awesome-os/maintenance-workflows`](https://github.com/awesome-os/maintenance-workflows).
+
 ## Supported Release Lines & ABI Manifest
 
 | Release Line | Channel | `NODE_MODULE_VERSION` (ABI) | Selection |
