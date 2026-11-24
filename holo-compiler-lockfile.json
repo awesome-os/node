@@ -1,0 +1,111 @@
+{
+  "schema": "holo-compiler-lockfile-v1",
+  "abiMagic": "0x33564742",
+  "casLayout": "v11",
+  "repo": "awesome-os/node",
+  "targets": [
+    "linux-arm64",
+    "linux-x64",
+    "macos-arm64",
+    "win64"
+  ],
+  "generatedAt": "2026-11-24T22:16:08.605Z",
+  "dependencies": [
+    {
+      "id": "awesome-os/node/install.ps1",
+      "kind": "object",
+      "version": "v0.3.0",
+      "target": "win64",
+      "sha512": "de145712d14742e57cab9e4522ba835da03a0526d7bdbac420385803613b8a2d780a9f2ac4f0a132ee469c776d59349a095c3f9b91ac30ce4ef9b7330b115c88",
+      "size": 354,
+      "executable": false,
+      "blob": "v11/files/de/de145712d14742e57cab9e4522ba835da03a0526d7bdbac420385803613b8a2d780a9f2ac4f0a132ee469c776d59349a095c3f9b91ac30ce4ef9b7330b115c88",
+      "url": "https://github.com/awesome-os/node/releases/download/v0.3.0/install.ps1",
+      "dependencies": []
+    },
+    {
+      "id": "awesome-os/node/install.sh",
+      "kind": "object",
+      "version": "v0.3.0",
+      "target": "any",
+      "sha512": "13001db8fd52001121d11de28a1115de7457bed3c80a61f486c8845a59133fb5c8f763857d164b057909781db6a66a59ede57c87dcf4425b2c76a7e941cab39c",
+      "size": 525,
+      "executable": true,
+      "blob": "v11/files/13/13001db8fd52001121d11de28a1115de7457bed3c80a61f486c8845a59133fb5c8f763857d164b057909781db6a66a59ede57c87dcf4425b2c76a7e941cab39c-exec",
+      "url": "https://github.com/awesome-os/node/releases/download/v0.3.0/install.sh",
+      "dependencies": []
+    },
+    {
+      "id": "awesome-os/node/node-linux-arm64",
+      "kind": "bin",
+      "version": "v0.3.0",
+      "target": "linux-arm64",
+      "sha512": "a9349025b325e6fec58681c08dac316151ba3ab957b005dbc6354a27bf1a709292eb57616cb061a44cac7020baffd588d0cfb2645190804f9d76bffda3b0058e",
+      "size": 1184120,
+      "executable": true,
+      "blob": "v11/files/a9/a9349025b325e6fec58681c08dac316151ba3ab957b005dbc6354a27bf1a709292eb57616cb061a44cac7020baffd588d0cfb2645190804f9d76bffda3b0058e-exec",
+      "url": "https://github.com/awesome-os/node/releases/download/v0.3.0/node-linux-arm64",
+      "dependencies": []
+    },
+    {
+      "id": "awesome-os/node/node-linux-x64",
+      "kind": "bin",
+      "version": "v0.3.0",
+      "target": "linux-x64",
+      "sha512": "a9b294a22021db74aa7a6aebdca710687a7c51635e37c2bebd838ea4d4c538d67c6441b794b6c7f8f6d5b88cb5ecc869cc25172c2a1da1c3da3822a45f546770",
+      "size": 1119368,
+      "executable": true,
+      "blob": "v11/files/a9/a9b294a22021db74aa7a6aebdca710687a7c51635e37c2bebd838ea4d4c538d67c6441b794b6c7f8f6d5b88cb5ecc869cc25172c2a1da1c3da3822a45f546770-exec",
+      "url": "https://github.com/awesome-os/node/releases/download/v0.3.0/node-linux-x64",
+      "dependencies": []
+    },
+    {
+      "id": "awesome-os/node/node-macos-arm64",
+      "kind": "ghost-launcher",
+      "version": "v0.3.0",
+      "target": "macos-arm64",
+      "sha512": "03d56a3fef992873d14bf66bcbb032e43fcb0df08672bd19ccc90062e3cf60e7b60883e7c60fc9007ddabb8a23560defe29d6d54cc4b67409cc668504aeae1d6",
+      "size": 52032,
+      "executable": true,
+      "blob": "v11/files/03/03d56a3fef992873d14bf66bcbb032e43fcb0df08672bd19ccc90062e3cf60e7b60883e7c60fc9007ddabb8a23560defe29d6d54cc4b67409cc668504aeae1d6-exec",
+      "url": "https://github.com/awesome-os/node/releases/download/v0.3.0/node-macos-arm64",
+      "dependencies": []
+    },
+    {
+      "id": "awesome-os/node/node.exe",
+      "kind": "ghost-launcher",
+      "version": "v0.3.0",
+      "target": "win64",
+      "sha512": "42e0d97895807ec77cebf8bfd2f87ebee5785d563da885f0489bb2ddb6cc857e41a1de723c8d6909454ae87a7a07ec09ff739da234292f028107ff74599a7620",
+      "size": 179200,
+      "executable": true,
+      "blob": "v11/files/42/42e0d97895807ec77cebf8bfd2f87ebee5785d563da885f0489bb2ddb6cc857e41a1de723c8d6909454ae87a7a07ec09ff739da234292f028107ff74599a7620-exec",
+      "url": "https://github.com/awesome-os/node/releases/download/v0.3.0/node.exe",
+      "dependencies": []
+    },
+    {
+      "id": "awesome-os/node/node.pdb",
+      "kind": "object",
+      "version": "v0.3.0",
+      "target": "win64",
+      "sha512": "29596afca2c5e87a7cc1778798211e853f555ddfd7d5dda0aad768726c0a76f8ef612b8ec338741968079f0aaef724e1a50bd50b608943a91a987dacd358f9f8",
+      "size": 1155072,
+      "executable": false,
+      "blob": "v11/files/29/29596afca2c5e87a7cc1778798211e853f555ddfd7d5dda0aad768726c0a76f8ef612b8ec338741968079f0aaef724e1a50bd50b608943a91a987dacd358f9f8",
+      "url": "https://github.com/awesome-os/node/releases/download/v0.3.0/node.pdb",
+      "dependencies": []
+    },
+    {
+      "id": "awesome-os/node/SHA256SUMS.txt",
+      "kind": "object",
+      "version": "v0.3.0",
+      "target": "any",
+      "sha512": "38b8afbfa42b438d0803f3a7616c8e40ce0b62eb422f299db7e29f468cf2f9d51a85adece1814571bd1c3d56e87e8f8022593f83187b66f7dc5a1eda13332e1b",
+      "size": 552,
+      "executable": false,
+      "blob": "v11/files/38/38b8afbfa42b438d0803f3a7616c8e40ce0b62eb422f299db7e29f468cf2f9d51a85adece1814571bd1c3d56e87e8f8022593f83187b66f7dc5a1eda13332e1b",
+      "url": "https://github.com/awesome-os/node/releases/download/v0.3.0/SHA256SUMS.txt",
+      "dependencies": []
+    }
+  ]
+}
