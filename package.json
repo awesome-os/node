@@ -1,0 +1,38 @@
+{
+  "name": "@awesome-os/node",
+  "version": "0.1.0",
+  "description": "Drop-in dual-line Node.js 27 (ABI 153) & Node.js 26 (ABI 147) native Ghost CAS launcher hydrated once from awesome-os/b8g-ghost cas-v1",
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/awesome-os/node.git"
+  },
+  "awesomeOs": {
+    "casRegistry": "https://raw.githubusercontent.com/awesome-os/b8g-ghost/main/manifests/index.json",
+    "releaseLines": {
+      "27": {
+        "channel": "alpha",
+        "abi": 153,
+        "default": true,
+        "keys": {
+          "win64": "node-27-win64.tar.zst",
+          "linux-x64": "node-27-linux-x64.tar.zst",
+          "linux-arm64": "node-27-linux-arm64.tar.zst",
+          "macos-arm64": "node-27-macos-arm64.tar.zst"
+        }
+      },
+      "26": {
+        "channel": "stable",
+        "abi": 147,
+        "default": false,
+        "keys": {
+          "win64": "node-26-win64.tar.zst",
+          "linux-x64": "node-26-linux-x64.tar.zst",
+          "linux-arm64": "node-26-linux-arm64.tar.zst",
+          "macos-arm64": "node-26-macos-arm64.tar.zst"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+name: Build & Release Native Ghost Node.js Launcher
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Zig
+        uses: mlugg/setup-zig@v2
+        with:
+          version: 0.14.1
+
+      - name: Cross-compile Win64, Linux x64, Linux arm64, macOS arm64 launchers
+        run: |
+          mkdir -p dist
+          zig cc -target x86_64-windows-gnu -O2 -s src/node_launcher.c -o dist/node.exe
+          zig cc -target x86_64-linux-musl -O2 -s src/node_launcher.c -o dist/node-linux-x64
+          zig cc -target aarch64-linux-musl -O2 -s src/node_launcher.c -o dist/node-linux-arm64
+          zig cc -target aarch64-macos -O2 -s src/node_launcher.c -o dist/node-macos-arm64
+          ls -lh dist/
+
+      - name: Publish GitHub Release
+        if: startsWith(github.ref, 'refs/tags/v')
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "${GITHUB_REF_NAME}" dist/* \
+            --title "${GITHUB_REF_NAME} — Native Ghost Node.js Launcher (Node 27 ABI 153 & Node 26 ABI 147)" \
+            --notes "Zero-shim ~60 KB native C11 Ghost Node.js launcher supporting both Node 27 (ABI 153, default) and Node 26 (ABI 147, B8G_NODE_LINE=26) via awesome-os/b8g-ghost cas-v1."
