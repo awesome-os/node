@@ -33,6 +33,11 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh release create "${GITHUB_REF_NAME}" dist/* \
-            --title "${GITHUB_REF_NAME} — Native Ghost Node.js Launcher (Node 27 ABI 153 & Node 26 ABI 147)" \
-            --notes "Zero-shim ~60 KB native C11 Ghost Node.js launcher supporting both Node 27 (ABI 153, default) and Node 26 (ABI 147, B8G_NODE_LINE=26) via awesome-os/b8g-ghost cas-v1."
+          if gh release view "${GITHUB_REF_NAME}" >/dev/null 2>&1; then
+            gh release upload "${GITHUB_REF_NAME}" dist/* --clobber
+          else
+            gh release create "${GITHUB_REF_NAME}" dist/* \
+              --title "${GITHUB_REF_NAME} — Native Ghost Node.js Launcher (Node 27 ABI 153 & Node 26 ABI 147)" \
+              --notes "Zero-shim ~60 KB native C11 Ghost Node.js launcher supporting both Node 27 (ABI 153, default) and Node 26 (ABI 147, B8G_NODE_LINE=26) via awesome-os/b8g-ghost cas-v1." \
+              || gh release upload "${GITHUB_REF_NAME}" dist/* --clobber
+          fi
