@@ -1,9 +1,12 @@
 {
   "name": "@awesome-os/node",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Drop-in dual-line Node.js 27 (ABI 153) & Node.js 26 (ABI 147) native Ghost CAS launcher hydrated once from awesome-os/b8g-ghost cas-v1",
   "type": "module",
   "license": "MIT",
+  "engines": {
+    "node": ">=22.18.0"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/awesome-os/node.git"
