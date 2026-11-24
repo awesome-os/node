@@ -1,6 +1,6 @@
 {
   "name": "@awesome-os/node",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Drop-in dual-line Node.js 27 (ABI 153) & Node.js 26 (ABI 147) native Ghost CAS launcher hydrated once from awesome-os/b8g-ghost cas-v1",
   "type": "module",
   "license": "MIT",
