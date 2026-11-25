@@ -70,3 +70,13 @@ zig cc -target x86_64-linux-musl -O2 -s src/node_launcher.c -o dist/node-linux-x
 # Linux arm64 ELF64
 zig cc -target aarch64-linux-musl -O2 -s src/node_launcher.c -o dist/node-linux-arm64
 ```
+
+## Quick Install & Run (Windows / Linux / macOS)
+
+```sh
+# Install / hydrate from v11 CAS via holo-pm
+holo-pm install repository://github.com/awesome-os/node@main
+
+# Or project & run directly via holo-project (0-byte hardlink)
+holo-project "project://node/node?from=repository://github.com/awesome-os/node@main"
+```
