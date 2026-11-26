@@ -1,3 +1,6 @@
+> [!NOTE]
+> Consolidated into https://github.com/awesome-os/chromium-baseline
+
 # `@awesome-os/node` — Dual-Line Ghost Node.js Launcher (Node 27 `ABI 153` & Node 26 `ABI 147`)
 
 Drop-in native C11 `node.exe` / `node` launcher (~60 KB, zero shell shims, zero Node bootstrap dependency) that hydrates official debloated Node.js runtimes **once** from [`awesome-os/b8g-ghost`](https://github.com/awesome-os/b8g-ghost) (`cas-v1`) into `~/.b8g/cas/node/<sha256>/`.
